@@ -1,7 +1,7 @@
 /* General Body Styles */
 body {
     font-family: "Gill Sans", sans-serif;
-    background-image: url("/myDev/portfolio-Kshitij-Dolas/images/BeachBackgroung.jpg");
+    background: linear-gradient(135deg, #f7f7f7, #eaeaea); /* Light grey gradient */
     color: #333; /* Neutral text color */
     margin: 0;
     padding: 0;
@@ -10,30 +10,40 @@ body {
 
 /* Profile Image Styles */
 .profileImg {
-    width: 300px; /* Default width for larger screens */
-    height: 300px; /* Ensure height matches width for a perfect circle */
+    width: 280px; /* Default width for larger screens */
+    height: 280px; /* Ensure height matches width for a perfect circle */
     border-radius: 50%; /* Makes the image circular */
-    border: 2px solid #e7b6c6; /* Blue border */
+    border: 3px solid #d1d1d1; /* Subtle grey border */
     object-fit: cover; /* Ensures the image fits within the circle */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    margin: 20px auto; /* Centers the image if it's a block-level element */
-    display: block; /* Ensures it behaves as a block-level element for centering */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.profileImg:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(90deg, #aca0a05b, #86c5f4); /* Light cyan to light sky blue */
+    background: linear-gradient(90deg, #c1c1c1, #e0e0e0); /* Light grey gradient */
     color: #333;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header nav ul {
@@ -42,53 +52,58 @@ header nav ul {
     margin: 1rem 0 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures navigation items wrap on small screens */
-}
-
-header nav ul li {
-    margin: 0 1.5rem;
+    gap: 2rem;
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: #086fbb; /* Medium blue for links */
+    color: #555; /* Dark grey for links */
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 5px;
 }
 
 header nav ul li a:hover {
-    color: #3ca0e7; /* Lighter blue hover */
+    color: #fff;
+    background: #333; /* Dark grey background on hover */
 }
 
 /* Main Content Styles */
 main {
     padding: 3rem;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #3ca0e7; /* Light sky blue */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: #555; /* Subtle grey heading */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 main p {
     font-size: 1.2rem;
-    color: #333;
+    color: #666; /* Darker grey for text */
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
 }
 
 /* Footer Styles */
 footer {
-    background: #bedff8; /* Light sky blue */
-    color: #086fbb;
+    background: #e0e0e0; /* Soft grey */
+    color: #555;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
@@ -98,60 +113,62 @@ footer p {
 
 /* Project Styles */
 .project {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
     color: #333;
-    border: 1px solid #86c5f4; /* Light blue border */
+    border: 1px solid #d1d1d1; /* Subtle grey border */
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 600px;
+    text-align: left;
 }
 
 .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(134, 197, 244, 0.6); /* Light blue shadow */
+    transform: translateY(-10px); /* Floating effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Links */
 a {
-    color: #086fbb; /* Medium blue */
+    color: #555; /* Neutral grey */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #3ca0e7; /* Lighter blue */
+    color: #000; /* Dark grey hover */
 }
 
 /* Buttons */
 button {
-    background: linear-gradient(90deg, #bedff8, #86c5f4); /* Light sky blue gradient */
+    background: linear-gradient(90deg, #e0e0e0, #c1c1c1); /* Grey gradient */
     border: none;
     padding: 0.8rem 1.5rem;
-    color: #fff;
+    color: #333;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(90deg, #86c5f4, #bedff8);
+    background: linear-gradient(90deg, #c1c1c1, #a1a1a1); /* Darker grey gradient on hover */
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(134, 197, 244, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Form Styles */
 form {
-    background: #ffffff; /* White */
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 2rem auto;
+    border: 1px solid #d1d1d1;
 }
 
 form label {
@@ -166,9 +183,9 @@ form textarea {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #bedff8; /* Light blue border */
+    border: 1px solid #d1d1d1;
     border-radius: 5px;
-    background: #f0f8ff; /* Very light blue */
+    background: #f7f7f7; /* Very light grey */
     color: #333;
 }
 
@@ -179,43 +196,38 @@ form button {
 /* Responsive Design */
 @media (max-width: 768px) {
     .profileImg {
-        width: 200px; /* Smaller profile image for smaller screens */
+        width: 200px;
         height: 200px;
     }
 
     header h1 {
-        font-size: 2rem; /* Smaller header text */
+        font-size: 2rem;
     }
 
-    header nav ul li {
-        margin: 0 0.5rem; /* Reduce spacing between navigation items */
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    main {
-        padding: 1.5rem; /* Reduce padding for smaller screens */
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
     }
 
     .project {
-        margin: 1rem auto;
-        padding: 1rem; /* Adjust padding for smaller devices */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* Smaller footer text */
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    main h2 {
-        font-size: 1.5rem; /* Adjust main heading size for very small screens */
-    }
-
-    main p {
-        font-size: 1rem; /* Adjust paragraph text size */
+    main {
+        padding: 1.5rem;
     }
 
     header nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 1rem;
+        flex-direction: column;
     }
 }
