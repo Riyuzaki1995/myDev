@@ -26,17 +26,25 @@ body {
 }
 
 /* Header Styles */
+/* General Header Styles */
 header {
     background: linear-gradient(90deg, #c1c1c1, #e0e0e0); /* Light grey gradient */
     color: #333;
     padding: 1.5rem 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: sticky; /* Default sticky behavior for larger screens */
     top: 0;
     z-index: 1000;
 }
 
+/* Responsive Design for Portrait Mode */
+@media (orientation: portrait), (max-width: 768px) {
+    header {
+        position: static; /* Navbar is no longer sticky in portrait mode or small screens */
+        box-shadow: none; /* Removes shadow for a cleaner look */
+    }
+}
 header h1 {
     font-size: 2.8rem;
     margin: 0;
