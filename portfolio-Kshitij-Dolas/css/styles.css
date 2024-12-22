@@ -1,16 +1,28 @@
 /* General Body Styles */
 body {
     font-family: "Gill Sans", sans-serif;
-    background: linear-gradient(135deg, #e7f3fe, #cfe6f9); /* Soft light blue gradient */
+    /*background: linear-gradient(135deg, #fffaf0, #e1f2bb, #ebc7dc); /* Soft light blue gradient */
+    background-image: url("/myDev/portfolio-Kshitij-Dolas/images/BeachBackgroung.jpg");
+    
     color: #333; /* Neutral text color */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
+.profileImg {
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Ensure height matches width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #e7b6c6; /* Blue border */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    margin: 20px auto; /* Centers the image if it's a block-level element */
+    display: block; /* Ensures it behaves as a block-level element for centering */
+}
 /* Header Styles */
 header {
-    background: linear-gradient(90deg, #86c5f4, #bedff8); /* Light cyan to light sky blue */
+    background: linear-gradient(90deg, #aca0a05b, #86c5f4); /* Light cyan to light sky blue */
     color: #333;
     padding: 1rem 0;
     text-align: center;
